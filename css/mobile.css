@@ -1,0 +1,213 @@
+h1{
+	font-size: 3.5rem;
+}
+h2{
+	color:rgba(255,255,255,0.9);
+	font-size: 1.5rem;
+	font-weight: normal;
+	opacity: 0.9;
+}
+h3{
+	color:rgba(255,255,255,0.8);
+	font-size: 1.2rem;
+	font-weight: normal;
+	opacity: 0.8;
+}
+p{
+	color:rgba(255,255,255,0.8);
+	font-size: 1rem;
+}
+.section{
+	text-align: center;
+}
+/*头像*/
+.section1 .avatar{
+	width: 12.5rem;
+	height: 12.5rem; 
+	overflow: hidden;
+	border: 0.5rem solid rgba(255, 245, 245, 0.5);
+	position: relative;
+	top: -900px;
+	opacity: 0;
+	perspective: 500;
+	transform: rotate(300reg, 300reg);
+	transition: 1s ease;
+	border-radius: 50%;
+}
+.section1.active .avatar{
+	top: 0;
+	opacity: 1;
+	transform: rotate(0reg, 0reg);
+}
+.textshadow1{
+	text-shadow: 1px 2px #49e,2px 3px #eee;
+	margin-bottom: 20px;
+}
+.textshadow2{
+	text-shadow: 1px 2px #6c9,2px 3px #eee;
+	margin-bottom: 20px;
+}
+/*第一页的字体运动*/
+.section1 h1, .section1 h2, .section1 p{
+	transform: scale(0.1);
+	transition-duration: .4s;
+}
+.section1 h1{
+	transition-delay: .1s;
+}
+.section1 h2{
+	transition-delay: .3s;
+}
+.section1 p{
+	transition-delay: .6s;
+}
+.section1.active h1,.section1.active h2, .section1.active p{
+	transform: scale(1);
+}
+
+
+.section2 .items li{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.section2 .items li a{
+	display: block;
+}
+.section2 .items li a img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+.section3 h1{
+	transition: .4s;
+	transform: scale(0);
+}
+.section3.active h1{
+	transform: scale(1);
+}
+.section3 span{
+	font-size: 1.2rem;
+	padding: 0.3rem;
+}
+.section3 span.lg{
+	font-size: 2.7rem;
+}
+.section3 span.sm{
+	font-size: 2rem;
+}
+.section3 span.xs{
+	font-size: 1.5rem;
+}
+.section3 .skillbox{
+	transition: 1s;
+	transform: scale(0);
+}
+.section3.active .skillbox{
+	transform: scale(1);
+}
+
+
+.section4 .work{
+	line-height: 2rem;
+	width: 95%;
+	margin: 0 auto;
+	transition: 3s;
+	opacity: 0;
+}
+.section4.active .work{
+	opacity: 1;
+}
+.section4 .work h2{
+	font-size: 1.8rem;
+	opacity: 1;
+	margin-bottom: 10px;
+}
+.section4 .work h3{
+	margin-bottom: 10px;
+}
+.work h3 p{
+	color:rgba(255,255,255,1);
+}
+
+
+
+.section5 .aboutme{
+	width: 95%;
+	margin: 0 auto;
+	transition: 1s all ease;
+	transform-origin: left;
+	transform:perspective(800px) rotateY(90deg);
+}
+.section5.active .aboutme{
+	transform:perspective(800px) rotateY(0deg);
+	transition-delay: .5s;
+}
+.section5 .aboutme span{
+	font-size: 1.1rem;
+	background: #065fb9;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: inline-block;
+	margin: 10px 0;
+}
+.section5 .aboutme span.add{
+	background: #049ff1;
+}
+
+
+.section6 p{
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 1);
+	margin-bottom: 10px;
+}
+.section6 a{
+	font-size: 1.6rem;
+	color: #6c9;
+	background: #fff;
+	border-radius: 10px;
+	display: inline-block;
+	padding: 5px 10px;
+	transition: .5s all ease;
+}
+.section6 a:hover{
+	box-shadow: 0 4px 10px #777;
+	transform: translate(0, -3px);
+}
+.section6 h1{
+	transition: 2s;
+	margin-bottom: 10px;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active h1{
+	opacity: 1;
+	top:0px;
+}
+.section6 p{
+	transition: 2s;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active p{
+	opacity: 1;
+	top:0px;
+}
+.section6 span{
+	transition: 2s;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active span{
+	opacity: 1;
+	top:0px;
+}
