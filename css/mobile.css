@@ -65,7 +65,7 @@ p{
 	transform: scale(1);
 }
 
-
+/*begin section2*/
 .section2 .items li{
 	width: 90%;
 	margin: 0 auto;
@@ -79,12 +79,7 @@ p{
 }
 
 
-
-
-
-
-
-
+/*begin section3*/
 .section3 h1{
 	transition: .4s;
 	transform: scale(0);
@@ -113,7 +108,7 @@ p{
 	transform: scale(1);
 }
 
-
+/*begin section4*/
 .section4 .work{
 	line-height: 2rem;
 	width: 95%;
@@ -137,17 +132,15 @@ p{
 }
 
 
-
+/*begin section5*/
 .section5 .aboutme{
 	width: 95%;
 	margin: 0 auto;
 	transition: 1s all ease;
-	transform-origin: left;
-	transform:perspective(800px) rotateY(90deg);
+	transform: scale(0);
 }
 .section5.active .aboutme{
-	transform:perspective(800px) rotateY(0deg);
-	transition-delay: .5s;
+	transform: scale(1);
 }
 .section5 .aboutme span{
 	font-size: 1.1rem;
@@ -162,6 +155,7 @@ p{
 }
 
 
+/*begin section6*/
 .section6 p{
 	font-size: 1.5rem;
 	color: rgba(255, 255, 255, 1);

@@ -1,5 +1,46 @@
-/*初始化*/ 
+*{
+	margin:0;padding:0;
+	font-family: 'Microsoft yahei';
+    color: #fff;
+}
 
+a{
+	text-decoration:none;
+    color:#666;
+}
+i,em,b,strong{
+	font-style:normal;
+	font-weight:normal;
+}
+ul,ol,dl{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:after{
+	display:block;
+	content:'';
+    clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+
+a img{
+	border:0;
+}
+img{
+	vertical-align:top;
+}
 h1{
 	font-size: 3.5rem;
 }
@@ -22,10 +63,12 @@ p{
 .section{
 	text-align: center;
 }
+
 /*头像*/
+
 .section1 .avatar{
-	width: 12.5rem;
-	height: 12.5rem; 
+	width: 180px;
+	height: 180px; 
 	overflow: hidden;
 	border: 0.5rem solid rgba(255, 245, 245, 0.5);
 	position: relative;
@@ -35,6 +78,7 @@ p{
 	transform: rotate(300reg, 300reg);
 	transition: 1s ease;
 	border-radius: 50%;
+	box-shadow: 1px 3px 5px #555; 
 }
 .section1.active .avatar{
 	top: 0;
@@ -67,39 +111,132 @@ p{
 	transform: scale(1);
 }
 
-.section2 .items{
-	width: 70%;
-	margin: 0 auto;
-	border: 1px solid black;
+/*begin section2*/
+@media screen and (min-width: 640px){
+	.section2 .items{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.section2 .items li{
+		float: left;
+		width: 30%;
+		height: 300px;
+		background: #fff;
+		overflow: hidden;
+		box-shadow: 2px 3px 5px #000;
+		transition: 1s all ease;
+	}
+	.section2 .items li:nth-child(1){
+		transform: rotateY(-180deg);
+	}
+	.section2.active .items li:nth-child(1){
+		transform: rotateY(0deg);
+	}
+	.section2 .items li:nth-child(2){
+		transform: rotateX(180deg);
+	}
+	.section2.active .items li:nth-child(2){
+		transform: rotateX(0deg);
+	}
+	.section2 .items li:nth-child(2) img{
+		position: relative;
+		top:0;
+	}
+	.section2 .items li:nth-child(3){
+		transform: rotateY(180deg);
+	}
+	.section2.active .items li:nth-child(3){
+		transform: rotateY(0deg);
+	}
+	.section2 .items li.add{
+		margin: 0 5%;
+	}
+	.section2 .items li a{
+		display: block;
+	}
+	.section2 .items li img{
+		width: 100%;
+	}
+
+	.section4 .work{
+		line-height: 2rem;
+		width: 600px;
+		margin: 0 auto;
+		transition: 3s;
+		opacity: 0;
+	}
+
+	/*begin section5*/
+	.section5 .aboutme{
+		width: 600px;
+		margin: 0 auto;
+		transition: 1s all ease;
+		transform-origin: left;
+		transform:perspective(800px) rotateY(90deg);
+	}
+	.section5.active .aboutme{
+		transform:perspective(800px) rotateY(0deg);
+		transition-delay: .5s;
+	}
+	.section5 .aboutme span{
+		font-size: 1.1rem;
+		background: #065fb9;
+		border-radius: 5px;
+		padding: 5px 10px;
+		display: inline-block;
+		margin: 10px 0;
+	}
+	.section5 .aboutme span.add{
+		background: #049ff1;
+	}
 }
-.section2 .items li{
-	float: left;
-	width: 30%;
-	background: red;
+
+@media screen and (max-width: 640px){
+	.section2 .items li{
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.section2 .items li a{
+		display: block;
+	}
+	.section2 .items li a img{
+		width: 100%;
+	}
+
+	.section4 .work{
+		line-height: 2rem;
+		width: 95%;
+		margin: 0 auto;
+		transition: 3s;
+		opacity: 0;
+	}
+
+	/*begin section5*/
+	.section5 .aboutme{
+		width: 95%;
+		margin: 0 auto;
+		transition: 1s all ease;
+		transform: scale(0);
+	}
+	.section5.active .aboutme{
+		transform: scale(1);
+	}
+	.section5 .aboutme span{
+		font-size: 1.1rem;
+		background: #065fb9;
+		border-radius: 5px;
+		padding: 5px 10px;
+		display: inline-block;
+		margin: 10px 0;
+	}
+	.section5 .aboutme span.add{
+		background: #049ff1;
+	}
 }
-.section2 .items li.add{
-	margin: 0 5%;
-}
-.section2 .items li a{
-	display: block;
-}
-.section2 .items li img{
-	width: 100%;
-}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*begin section3*/
 .section3 h1{
 	transition: .4s;
 	transform: scale(0);
@@ -129,13 +266,8 @@ p{
 }
 
 
-.section4 .work{
-	line-height: 2rem;
-	width: 600px;
-	margin: 0 auto;
-	transition: 3s;
-	opacity: 0;
-}
+/*begin section4*/
+
 .section4.active .work{
 	opacity: 1;
 }
@@ -153,34 +285,14 @@ p{
 
 
 
-.section5 .aboutme{
-	width: 600px;
-	margin: 0 auto;
-	transition: 1s all ease;
-	transform-origin: left;
-	transform:perspective(800px) rotateY(90deg);
-}
-.section5.active .aboutme{
-	transform:perspective(800px) rotateY(0deg);
-	transition-delay: .5s;
-}
-.section5 .aboutme span{
-	font-size: 1.1rem;
-	background: #065fb9;
-	border-radius: 5px;
-	padding: 5px 10px;
-	display: inline-block;
-	margin: 10px 0;
-}
-.section5 .aboutme span.add{
-	background: #049ff1;
-}
 
 
+/*begin section6*/
 .section6 p{
 	font-size: 1.5rem;
 	color: rgba(255, 255, 255, 1);
 	margin-bottom: 10px;
+	padding: 2%;
 }
 .section6 a{
 	font-size: 1.6rem;
