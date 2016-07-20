@@ -1,12 +1,9 @@
 body{
     font-family: 'Microsoft YaHei', sans-serif;
 }
-
-/*进度条*/
 .progress {
     margin-bottom: 15px;
 }
-/*头像*/
 .wh64{
     width: 64px;
     height: 64px;
